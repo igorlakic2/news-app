@@ -1,5 +1,6 @@
 import React from "react";
 import { Navigate, useOutlet } from "react-router-dom";
+import Header from "../components/Header/Header";
 // import Header from "../components/Header/Header";
 import { useAuth } from "./useAuth";
 
@@ -13,7 +14,8 @@ export const HomeLayout = () => {
 
   return (
     <div>
-      {/* <Header /> */}
+      <Header pages={[{ label: "Početna", path: "/" }]} />
+
       {outlet}
     </div>
   );
