@@ -1,3 +1,3 @@
 # NEWS APP
 
-Implemented: Webpack, Routing (Authentication)
+Implemented: Webpack, Routing (Authentication), Firebase
