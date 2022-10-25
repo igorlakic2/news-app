@@ -1,1 +1,3 @@
-# news-app
+# NEWS APP
+
+Implemented: Webpack, Routing (Authentication)
