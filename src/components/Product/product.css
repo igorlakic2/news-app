@@ -1,0 +1,29 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  width: 200px;
+  box-shadow: 2px 2px 15px gray;
+  border-radius: 3px;
+  margin: 10px;
+}
+.img {
+  width: 100%;
+  height: 150;
+}
+.title {
+  flex-grow: 1;
+}
+.addBtn {
+  margin: 1rem auto;
+  color: whitesmoke;
+  background: #f28e1c;
+  font-weight: bold;
+  padding: 5px 25px;
+  transition: 100ms all ease-in;
+  /* &:hover: {
+      backgroundColor: whitesmoke;
+      color: #f28e1c;
+    } */
+}
