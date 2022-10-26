@@ -93,7 +93,7 @@ const Login = () => {
                         color: "#6B6A6A",
                       }}
                     >
-                      PRIJAVA
+                      Login
                     </Typography>
                   </Grid>
 
@@ -110,7 +110,7 @@ const Login = () => {
                       name="password"
                       type="password"
                       variant="standard"
-                      label="Lozinka"
+                      label="Password"
                     />
                   </Grid>
 
@@ -129,7 +129,7 @@ const Login = () => {
                         },
                       }}
                     >
-                      ULOGUJTE SE
+                      LOG IN
                     </Button>
                   </Grid>
                 </Grid>
