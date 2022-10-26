@@ -1,8 +1,11 @@
 import { Button } from "@mui/material";
 import React from "react";
 import "./product.css";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/features/cartSlice";
 
 const Product = ({ url, title, price }) => {
+  const dispatch = useDispatch();
   return (
     <div className="card">
       <img src={url} alt="product" className="img" />
@@ -10,17 +13,7 @@ const Product = ({ url, title, price }) => {
       <p>Cena: {price} RSD</p>
       <Button
         className="addBtn"
-        onClick={
-          () => {}
-          //   dispatch(
-          //     addBeerToCart(
-          //       name,
-          //       price,
-          //       id,
-          //       beerIf.length > 0 ? beerIf[0].quantity + 1 : 1
-          //     )
-          //   )
-        }
+        onClick={() => dispatch(addToCart({ url, title, price }))}
       >
         DODAJ U KORPU{" "}
         <i
