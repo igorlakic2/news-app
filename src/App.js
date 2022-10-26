@@ -12,7 +12,7 @@ function App() {
     <Routes>
       <Route element={<HomeLayout />}>
         <Route path="/" element={<Products />} />
-        <Route path="/prijava" element={<Login />} />
+        <Route path="/login" element={<Login />} />
       </Route>
 
       <Route path="/admin-panel" element={<ProtectedLayout />}>

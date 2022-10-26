@@ -14,7 +14,7 @@ export const HomeLayout = () => {
 
   return (
     <div>
-      <Header pages={[{ label: "Početna", path: "/" }]} />
+      <Header pages={[{ label: "Products", path: "/" }]} />
 
       {outlet}
     </div>

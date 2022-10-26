@@ -55,20 +55,18 @@ const Header = ({ pages }) => {
           <div>
             <ul>
               <li
-                className={
-                  `${url[url.length - 1]}` === "prijava" ? "active" : ""
-                }
+                className={`${url[url.length - 1]}` === "login" ? "active" : ""}
               >
-                <Link to="/prijava">Prijava</Link>
+                <Link to="/login">Login</Link>
               </li>
             </ul>
           </div>
         )}
       </nav>
-      {cart.cartItems.length > 0 && (
+      {cart.total > 0 && (
         <div className="cartIcon">
           <ShoppingCartIcon fontSize="large" />
-          {cart.cartItems.length}
+          {cart.total}
         </div>
       )}
     </HeaderDiv>
