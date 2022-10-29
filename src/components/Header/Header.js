@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import "./style.css";
 import { useAuth } from "../../routing/useAuth";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useSelector } from "react-redux";
+import CheckoutModal from "../Modal/CheckoutModal";
 
 const HeaderDiv = styled.div`
   background-color: #2558b8;
@@ -25,7 +26,7 @@ const Header = ({ pages }) => {
   /* eslint-disable */
   const url = window.location.href.split("/");
   const cart = useSelector((state) => state.cart);
-  console.log(cart);
+  const [modalOpen, setModalOpen] = useState(false);
 
   return (
     <HeaderDiv>
@@ -45,7 +46,7 @@ const Header = ({ pages }) => {
             {value && value !== "null" && (
               <li>
                 <a onClick={logout} style={{ cursor: "pointer" }}>
-                  Odjava
+                  Logout
                 </a>
               </li>
             )}
@@ -63,12 +64,13 @@ const Header = ({ pages }) => {
           </div>
         )}
       </nav>
-      {cart.total > 0 && (
-        <div className="cartIcon">
+      {cart.total > 0 && value === "null" && (
+        <div className="cartIcon" onClick={() => setModalOpen(true)}>
           <ShoppingCartIcon fontSize="large" />
           {cart.total}
         </div>
       )}
+      {modalOpen && <CheckoutModal open={modalOpen} setModal={setModalOpen} />}
     </HeaderDiv>
   );
 };
