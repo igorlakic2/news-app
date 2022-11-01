@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import "./index.css";
 import Admin from "./pages/Admin";
 import Login from "./pages/Login";
-import Products from "./pages/Products";
+import Products from "./pages/Products/Products";
 import { HomeLayout } from "./routing/HomeLayout";
 import { ProtectedLayout } from "./routing/ProtectedLayout";
 
