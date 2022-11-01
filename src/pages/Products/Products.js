@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { db } from "../util/firebase-config";
+import { db } from "../../util/firebase-config";
 import {
   collection,
   getDocs,
@@ -8,7 +8,7 @@ import {
   doc,
   deleteDoc,
 } from "firebase/firestore";
-import Product from "../components/Product/Product";
+import Product from "../../components/Product/Product";
 import styled from "styled-components";
 
 const ProductsDiv = styled.div`
@@ -56,7 +56,7 @@ const Products = () => {
 
   return (
     <div>
-      Products
+      <h2>Products</h2>
       {/* <button onClick={addUser}>Add user</button> */}
       <ProductsDiv>
         {products.map((product) => (
